@@ -1,8 +1,10 @@
 # tDF-more-mods
-A pair of modules made for turtle-Dragonflight
+A pair of modules made for [tDF](https://github.com/TheLinuxITGuy/Turtle-Dragonflight) by [TheLinuxITGuy](https://github.com/TheLinuxITGuy)
 
 
-Code and inspo from: 
+# Only to be used with version 2.0 and above
+
+# Code and inspo from: 
 
 [Shagutweaks](https://github.com/shagu/ShaguTweaks/) by [shagu](https://github.com/shagu)   
 
@@ -12,4 +14,3 @@ Code and inspo from:
 
 [tDF](https://github.com/TheLinuxITGuy/Turtle-Dragonflight) by [TheLinuxITGuy](https://github.com/TheLinuxITGuy)
 
-[StylePoints](https://github.com/Monteo/RoguePack/tree/master/StylePoints) by [Monteo](https://github.com/Monteo) for combopoints
