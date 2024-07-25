@@ -1,0 +1,27 @@
+## Interface: 11200
+## Title: |cff008000Turtle |cff1974d2Dragonflight |cffffffffMore-Mods
+## Author: Delirium / Arkoudokinigos
+## Notes: Adds additional vanilla 1.12 custom mods to tDF.
+## Version: GIT
+## Dependencies: tDF
+
+# tDF-More-Mods
+
+#other
+mods\other\deli_ui.lua
+mods\other\restyle_ui_deli.lua
+mods\other\vignette.lua
+mods\other\error_text.lua
+
+#unitframes
+mods\unitframes\deli_unitframes.lua
+mods\unitframes\deli_override.lua
+mods\unitframes\abbrev_names.lua
+mods\unitframes\unitframes-energy-tick.lua
+
+#actionbars
+mods\actionbars\hide-petbar.lua
+mods\actionbars\actionbar-mouseover-bar-mainmenubar.lua
+mods\actionbars\actionbar-mouseover-bar-bottomleft.lua
+mods\actionbars\actionbar-mouseover-bar-bottomright.lua
+mods\actionbars\right-actionbar-center.lua
