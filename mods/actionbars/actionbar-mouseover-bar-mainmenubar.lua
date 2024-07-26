@@ -212,11 +212,11 @@ module.enable = function(self)
         end
 
         -- SP_SwingTimer / zUI SwingTimer / GryllsSwingTimer support
-        if SP_ST_Frame then
-            SP_ST_Frame:ClearAllPoints()
-            SP_ST_Frame:SetPoint("BOTTOM", CastingBarFrame, "TOP", 0, 14)
-            lock(SP_ST_Frame)      
-        end
+        -- if SP_ST_Frame then
+            -- SP_ST_Frame:ClearAllPoints()
+            -- SP_ST_Frame:SetPoint("BOTTOM", CastingBarFrame, "TOP", 0, 14)
+            -- lock(SP_ST_Frame)      
+        -- end
     end
 
     local ReducedActionbar

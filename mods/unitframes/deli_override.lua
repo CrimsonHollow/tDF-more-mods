@@ -20,7 +20,7 @@ local _G = ShaguTweaks.GetGlobalEnv()
 
 module.enable = function(self)
 	local addonpath = "Interface\\AddOns\\tDF-more-mods"
-	local customfont = addonpath .. "\\fonts\\PROTOTYPE.TTF"
+	local customfont = addonpath .. "\\fonts\\Prototype.ttf"
    local function setup()
     if TargetFrameHealthBar._SetStatusBarColor then
         -- unitframes-bighealth is active
