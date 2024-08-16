@@ -13,6 +13,8 @@ mods\other\restyle_ui_deli.lua
 mods\other\vignette.lua
 mods\other\error_text.lua
 mods\other\SP_SwingTimer.lua
+mods\other\minimap_override.lua
+!mods\other\combopoints.lua
 
 #unitframes
 mods\unitframes\deli_unitframes.lua

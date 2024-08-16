@@ -110,7 +110,7 @@ local sections  = {
 
             MBB_MinimapButtonFrame:ClearAllPoints()
             MBB_MinimapButtonFrame:SetPoint("CENTER", Minimap, "TOPRIGHT", 30, 30)
-            
+               
             
             local function showButton(button)
                 button:SetAlpha(1)

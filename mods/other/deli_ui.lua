@@ -48,8 +48,8 @@ end
 		BuffButton16:ClearAllPoints()
 		BuffButton16:SetPoint("TOPRIGHT", UIParent, -40, -140)
         -- prevent TemporaryEnchantFrame from moving
-        TemporaryEnchantFrame.ClearAllPoints = function() end
-        TemporaryEnchantFrame.SetPoint = function() end
+        -- TemporaryEnchantFrame.ClearAllPoints = function() end
+        -- TemporaryEnchantFrame.SetPoint = function() end
 		
     end
 
