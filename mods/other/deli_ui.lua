@@ -36,22 +36,7 @@ end
 
 
 
-    local function buffs()
-        -- Buffs start with TemporaryEnchantFrame
-        -- Debuffs are aligned underneath the TemporaryEnchantFrame
-        TemporaryEnchantFrame:ClearAllPoints()
-        TemporaryEnchantFrame:SetPoint("BOTTOMRIGHT", PlayerFrame, -5, -7)
-		BuffButton0:ClearAllPoints()
-		BuffButton0:SetPoint("TOPRIGHT", UIParent, -20, -20)
-		BuffButton8:ClearAllPoints()
-		BuffButton8:SetPoint("LEFT", BuffButton7, "LEFT", -38, 0 )
-		BuffButton16:ClearAllPoints()
-		BuffButton16:SetPoint("TOPRIGHT", UIParent, -40, -140)
-        -- prevent TemporaryEnchantFrame from moving
-        -- TemporaryEnchantFrame.ClearAllPoints = function() end
-        -- TemporaryEnchantFrame.SetPoint = function() end
-		
-    end
+
 
     local function chat()
         local _, fontsize = ChatFrame1:GetFont()
@@ -217,6 +202,7 @@ local timer = CreateFrame("Frame")
         if not this.loaded then
             this.loaded = true
             unitframes()
+			
 			--durability()
             buffs()
             chat()
