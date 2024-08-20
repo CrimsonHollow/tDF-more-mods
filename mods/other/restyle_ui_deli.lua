@@ -200,18 +200,18 @@ local sections  = {
             end
         end
 		
-		-- for i = 0, 16 do
-            -- for _, v in pairs(
-                    -- {
-                    -- _G['BuffButton'..i],
-                    -- _G['BuffButton'..i..'Border'],
-                -- }
-            -- ) do
-                -- local s = 40
-                -- v:SetWidth(s)
-                -- v:SetHeight(s)
-            -- end
-        -- end
+		for i = 0, 16 do
+             for _, v in pairs(
+                     {
+                     _G['BuffButton'..i],
+                     _G['BuffButton'..i..'Border'],
+                }
+            ) do
+                local s = 35
+                v:SetWidth(s)
+                v:SetHeight(s)
+            end
+         end
 		
 		for i = 16, 23 do
             for _, v in pairs(
@@ -239,7 +239,7 @@ local sections  = {
                     _G['BuffButton'..i..'Border'],
                 }
             ) do
-                local s = 40
+                local s = 45
                 v:SetWidth(s)
                 v:SetHeight(s)
             end
