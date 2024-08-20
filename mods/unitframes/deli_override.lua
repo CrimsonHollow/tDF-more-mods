@@ -28,7 +28,12 @@ module.enable = function(self)
         if PlayerFrameHealthBar.TextString then
             PlayerFrameHealthBar.TextString:SetPoint("TOP", PlayerFrameHealthBar, "BOTTOM", 0, 30)
         end
-    
+		
+		if DeliPower then
+			PlayerFrameHealthBar.TextString:ClearAllPoints()
+			PlayerFrameHealthBar.TextString:SetPoint("TOP", PlayerFrameHealthBar, "BOTTOM", 0, 35)
+		end
+		
         if TargetFrameHealthBar.TextString then
             TargetFrameHealthBar.TextString:SetPoint("TOP", TargetFrameHealthBar, "BOTTOM", -2, 30)
         end

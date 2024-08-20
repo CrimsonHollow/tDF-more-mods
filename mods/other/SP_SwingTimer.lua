@@ -44,8 +44,16 @@ module.enable = function(self)
             SP_ST_FrameOFF:ClearAllPoints()
 
             SP_ST_Frame:SetPoint("CENTER", 0, -170)
-            SP_ST_FrameOFF:SetPoint("TOP", "SP_ST_Frame", "BOTTOM", 0, -4);
-
+            SP_ST_FrameOFF:SetPoint("TOP", "SP_ST_Frame", "BOTTOM", 0, 30);
+			
+			if SPFrame1 then 
+				SP_ST_Frame:ClearAllPoints()
+				SP_ST_FrameOFF:ClearAllPoints()
+				SP_ST_Frame:SetPoint("CENTER", 0, -150)
+				SP_ST_FrameOFF:SetPoint("TOP", "SP_ST_Frame", "BOTTOM", 0, 30)
+			end
+				
+				
             SP_ST_FrameTime:ClearAllPoints()
 	        SP_ST_FrameTime2:ClearAllPoints()            
             
@@ -89,9 +97,15 @@ module.enable = function(self)
 
                 local r, g, b, a = .7, .7, .7, .9
                 f:SetBackdropBorderColor(r, g, b, a)
+				if ShaguTweaks.DarkMode then
+				f:SetBackdropBorderColor( .3, .3, .3, .9)
+				end
             end           
+			
             
             border(SP_ST_Frame)
-            border(SP_ST_FrameOFF)            
+            border(SP_ST_FrameOFF)      
+			
+
         end
 end

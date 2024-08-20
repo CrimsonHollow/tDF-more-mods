@@ -28,6 +28,12 @@ MultiBarRightButton1:ClearAllPoints()
 MultiBarRightButton1:SetFrameStrata("BACKGROUND")
 MultiBarRightButton1:SetPoint("CENTER",UIParent,"CENTER",-83,-185)
 
+local function powerpos()
+	if DeliPower then
+	MultiBarRightButton1:SetPoint("CENTER",PlayerFrameManaBar,"CENTER",-83,-31)
+	end
+end
+
 function barsize(MultiBarRightButton)
 for i = 1, 12 do
 	local bar =_G['MultiBarRightButton' .. i]
@@ -37,4 +43,24 @@ for i = 1, 12 do
 end
 	end
 	barsize()
+	
+	
+	 local timer = CreateFrame("Frame")
+  timer:Hide()
+  timer:SetScript("OnUpdate", function()
+    if GetTime() >= timer.time then
+      timer.time = nil
+      powerpos()
+      this:Hide()
+      this:SetScript("OnUpdate", nil)
+    end
+  end)
+
+  local events = CreateFrame("Frame", nil, UIParent)
+  events:RegisterEvent("PLAYER_ENTERING_WORLD")
+  events:SetScript("OnEvent", function()
+      -- trigger the timer to go off 1 second after login
+      timer.time = GetTime() + 1
+      timer:Show()
+    end)
 	end

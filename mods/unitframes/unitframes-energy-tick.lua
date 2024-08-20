@@ -7,6 +7,7 @@ local module = ShaguTweaks:register({
   })
 
 module.enable = function(self)
+local function MP5()
     local energytick = CreateFrame("Frame", nil, PlayerFrameManaBar)
     energytick:SetAllPoints(PlayerFrameManaBar)
     energytick:RegisterEvent("PLAYER_ENTERING_WORLD")
@@ -83,3 +84,24 @@ module.enable = function(self)
   energytick.spark:SetWidth(pheight + 4)
   energytick.spark:SetBlendMode('ADD')
 end
+
+ local timer = CreateFrame("Frame")
+  timer:Hide()
+  timer:SetScript("OnUpdate", function()
+    if GetTime() >= timer.time then
+      timer.time = nil
+      MP5()
+      this:Hide()
+      this:SetScript("OnUpdate", nil)
+    end
+  end)
+
+  local events = CreateFrame("Frame", nil, UIParent)
+  events:RegisterEvent("PLAYER_ENTERING_WORLD")
+  events:SetScript("OnEvent", function()
+      -- trigger the timer to go off 1 second after login
+      timer.time = GetTime() + 1
+      timer:Show()
+    end)
+	end
+
