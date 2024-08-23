@@ -423,12 +423,12 @@ local sections  = {
         styleFrame:SetHeight(16)
         styleFrame:SetWidth(Minimap:GetWidth())
 
-        -- Zone Text
-        MinimapZoneTextButton:ClearAllPoints()
-        MinimapZoneTextButton:SetPoint("TOP", Minimap, 0, 13)
-        MinimapZoneText:SetFont(customfont, 14, "OUTLINE")
-        MinimapZoneText:SetDrawLayer("OVERLAY", 7)   
-        MinimapZoneText:SetParent(styleFrame)
+        -- -- Zone Text
+        -- MinimapZoneTextButton:ClearAllPoints()
+        -- MinimapZoneTextButton:SetPoint("TOP", Minimap, 0, 13)
+        -- MinimapZoneText:SetFont(customfont, 14, "OUTLINE")
+        -- MinimapZoneText:SetDrawLayer("OVERLAY", 7)   
+        -- MinimapZoneText:SetParent(styleFrame)
         -- MinimapZoneText:Hide()
 
         -- Minimap:SetScript("OnEnter", function()
@@ -442,7 +442,8 @@ local sections  = {
         -- ShaguTweaks clock
         if MinimapClock then
             MinimapClock:ClearAllPoints()
-            MinimapClock:SetPoint("CENTER", styleFrame, "CENTER", -1, 0)
+			MinimapClock.text:SetFont(customfont, 14, "OUTLINE")
+            MinimapClock:SetPoint("CENTER", styleFrame, "CENTER", 0, -20)
         end
 
         -- ShaguTweaks-Mods fps
@@ -463,20 +464,20 @@ local sections  = {
             MiniMapTrackingFrame:SetPoint("TOPLEFT", Minimap, "TOPLEFT", -2, 1)
             MiniMapTrackingFrame:SetScale(0.9)
             MiniMapTrackingBorder:SetTexture(nil)
-			Minimap:SetMaskTexture[[Interface\Addons\ShaguTweaks-more-mods\img\MinimapMask]]
+			Minimap:SetMaskTexture[[Interface\Addons\tDF-more-mods\img\MinimapMask]]
 			Minimap:SetWidth(192.6)
 			Minimap:SetHeight(172.6)
 			
 
-            -- Mail
-            MiniMapMailFrame:ClearAllPoints()
-            MiniMapMailFrame:SetPoint("TOPRIGHT", Minimap, "TOPRIGHT", 4, 2)
-            MiniMapMailFrame:SetScale(1.2)
-            MiniMapMailBorder:SetTexture(nil)
+            -- -- Mail
+            -- MiniMapMailFrame:ClearAllPoints()
+            -- MiniMapMailFrame:SetPoint("TOPRIGHT", Minimap, "TOPRIGHT", 4, 2)
+            -- MiniMapMailFrame:SetScale(1.2)
+            -- MiniMapMailBorder:SetTexture(nil)
 
-            -- PVP
-            MiniMapBattlefieldFrame:ClearAllPoints()
-            MiniMapBattlefieldFrame:SetPoint("BOTTOMLEFT", Minimap, "BOTTOMLEFT", 2, 8)
+            -- -- PVP
+            -- MiniMapBattlefieldFrame:ClearAllPoints()
+            -- MiniMapBattlefieldFrame:SetPoint("BOTTOMLEFT", Minimap, "BOTTOMLEFT", 2, 8)
         end        
     end
 
