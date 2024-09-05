@@ -15,7 +15,7 @@ mods\other\error_text.lua
 mods\other\SP_SwingTimer.lua
 !mods\other\minimap_override.lua
 mods\other\powerbar.lua
-mods\other\move-unitframes-extended.lua
+!mods\other\move-unitframes-extended.lua
 mods\other\buffs-grow-right.lua
 !mods\other\StylePoints.lua
 
