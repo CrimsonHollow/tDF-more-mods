@@ -32,13 +32,23 @@ module.enable = function(self)
     end
         
     local function hide(bar)
+		if (class == "ROGUE") then
+		bar:SetAlpha(0)
+		showbars()
+		else 
         bar:Hide()
         showbars()
+		end
     end
     
     local function show(bar)
+		if (class == "ROGUE") then
+		bar:SetAlpha(1)
+		hidebars()
+		else 
         bar:Show()    
         hidebars()
+		end
     end
     
     local function mouseover(bar)
