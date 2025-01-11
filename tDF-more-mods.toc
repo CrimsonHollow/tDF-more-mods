@@ -3,7 +3,8 @@
 ## Author: Delirium / Arkoudokinigos
 ## Notes: Adds additional vanilla 1.12 custom mods to tDF.
 ## Version: GIT
-## Dependencies: tDF
+## Dependencies: Turtle-Dragonflight 
+
 
 # tDF-More-Mods
 
