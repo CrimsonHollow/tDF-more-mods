@@ -5,7 +5,7 @@ local module = ShaguTweaks:register({
     description = "Puts the buffs to the left and makes them grow the the right!.",
     expansions = { ["vanilla"] = true, ["tbc"] = nil },
     category = "Deli UI",
-    enabled = nil,
+    enabled = true,
 })
 
 module.enable = function(self)

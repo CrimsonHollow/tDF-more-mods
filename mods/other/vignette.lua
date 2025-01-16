@@ -5,7 +5,7 @@ local module = ShaguTweaks:register({
     description = "Puts a stylish Vignette in your screen!.",
     expansions = { ["vanilla"] = true, ["tbc"] = nil },
     category = "Deli UI",
-    enabled = nil,
+    enabled = true,
 })
 
 module.enable = function(self)

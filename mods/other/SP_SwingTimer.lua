@@ -5,7 +5,7 @@ local module = ShaguTweaks:register({
     description = "Set up the addon to my preferences!.",
     expansions = { ["vanilla"] = true, ["tbc"] = nil },
     category = "Deli UI",
-    enabled = nil,
+    enabled = true,
 })
 
 module.enable = function(self)

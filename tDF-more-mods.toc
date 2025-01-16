@@ -16,6 +16,7 @@ mods\other\error_text.lua
 mods\other\SP_SwingTimer.lua
 !mods\other\minimap_override.lua
 mods\other\powerbar.lua
+mods\other\powerbar-alt.lua
 !mods\other\move-unitframes-extended.lua
 mods\other\buffs-grow-right.lua
 !mods\other\StylePoints.lua
@@ -32,3 +33,5 @@ mods\actionbars\actionbar-mouseover-bar-mainmenubar.lua
 mods\actionbars\actionbar-mouseover-bar-bottomleft.lua
 mods\actionbars\actionbar-mouseover-bar-bottomright.lua
 mods\actionbars\right-actionbar-center.lua
+mods\actionbars\left-actionbar.lua
+

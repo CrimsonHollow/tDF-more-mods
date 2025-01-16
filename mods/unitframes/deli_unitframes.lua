@@ -5,7 +5,7 @@ local module = ShaguTweaks:register({
   description = "Bigger , retail-like Unitframes.",
   expansions = { ["vanilla"] = true, ["tbc"] = true },
   category = "Deli UI",
-  enabled = nil,
+  enabled = true,
 })
 
 
@@ -137,8 +137,8 @@ PlayerFrameGroupIndicator:SetAlpha(0)
     PetHitIndicator.SetText = function() end
 
 
-  PlayerFrameHealthBar:SetStatusBarTexture[[Interface\Addons\tDF-more-mods\img\UI-StatusBar]]
-  TargetFrameHealthBar:SetStatusBarTexture[[Interface\Addons\tDF-more-mods\img\UI-StatusBar]]
+  PlayerFrameHealthBar:SetStatusBarTexture[[Interface\Addons\tDF-more-mods\img\Smoothv2]]
+  TargetFrameHealthBar:SetStatusBarTexture[[Interface\Addons\tDF-more-mods\img\Smoothv2]]
   PlayerFrameTexture:SetTexture[[Interface\Addons\tDF-more-mods\img\UI-TargetingFrame]]  
   PlayerStatusTexture:SetTexture[[Interface\Addons\tDF-more-mods\img\UI-Player-Status]]  
   PlayerFrameHealthBar:SetPoint("TOPLEFT", 106, -23)
@@ -153,8 +153,8 @@ PlayerFrameGroupIndicator:SetAlpha(0)
   
  
   PlayerFrameHealthBar:SetWidth(124)
-  PlayerFrameHealthBar:SetHeight(30)
-  PlayerFrameHealthBar:SetPoint("TOPLEFT", 102, -23)
+  PlayerFrameHealthBar:SetHeight(29)
+  PlayerFrameHealthBar:SetPoint("TOPLEFT", 102, -25)
   PlayerFrameManaBar:SetWidth(126)
   PlayerFrameManaBar:SetPoint("TOPLEFT", 102, -52)
   PlayerFrameBackground:SetWidth(122)
@@ -163,7 +163,7 @@ PlayerFrameGroupIndicator:SetAlpha(0)
   -- TargetFrameTexture:SetTexture[[Interface\Addons\ShaguTweaks-more-mods\img\UI-TargetingFrame2]]  
   TargetFrameHealthBar:SetPoint("TOPRIGHT", -103, -23)
   TargetFrameHealthBar:SetHeight(30)
-  TargetFrameHealthBar:SetWidth(123)
+  TargetFrameHealthBar:SetWidth(122)
   TargetFrameManaBar:SetPoint("TOPRIGHT", -100, -52)
   TargetFrameManaBar:SetWidth(127)
   TargetFrameBackground:SetPoint("TOPRIGHT", -100, -22)

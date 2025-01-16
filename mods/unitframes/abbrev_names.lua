@@ -3,7 +3,7 @@ local module = ShaguTweaks:register({
     description = "Abbreviates long unit names.",
     expansions = { ["vanilla"] = true, ["tbc"] = nil },
     category = "Deli UI",
-    enabled = nil,
+    enabled = true,
 })
 
 module.enable = function(self)
@@ -28,8 +28,32 @@ module.enable = function(self)
         return name
     end
 
+	local function getNameStringToT(unitstr)
+        local name = UnitName(unitstr)
+        local size = 5
+        
+        -- first try to only abbreviate the first word
+        if name and strlen(name) > size then
+            name = string.gsub(name, "^(%S+) ", abbrevname)
+        end
+        
+        -- abbreviate all if it still doesn't fit
+        if name and strlen(name) > size then
+            name = string.gsub(name, "(%S+) ", abbrevname)
+        end
+        
+        return name
+    end
+	
     local function abbrevName(frame, unit)
         local name = getNameString(unit)
+        if name and frame.name then
+            frame.name:SetText(name)
+        end
+    end
+	
+	    local function abbrevNameToT(frame, unit)
+        local name = getNameStringToT(unit)
         if name and frame.name then
             frame.name:SetText(name)
         end
@@ -43,6 +67,6 @@ module.enable = function(self)
     
     local tot = CreateFrame("Frame", nil, TargetFrame)
     tot:SetScript("OnUpdate", function()
-        abbrevName(TargetofTargetFrame, "targettarget")
+        abbrevNameToT(TargetofTargetFrame, "targettarget")
     end)
 end

@@ -5,7 +5,7 @@ local module = ShaguTweaks:register({
     description = "Turns off the annoying Out of Range/Not enough rage text.",
     expansions = { ["vanilla"] = true, ["tbc"] = nil },
     category = "Deli UI",
-    enabled = nil,
+    enabled = true,
 })
 
 module.enable = function(self)

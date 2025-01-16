@@ -3,7 +3,7 @@ local module = ShaguTweaks:register({
     description = "Adds an energy & mana tick to the player frame.",
     expansions = { ["vanilla"] = true, ["tbc"] = nil },
     category = "Deli UI",
-    enabled = nil,
+    enabled = true,
   })
 
 module.enable = function(self)

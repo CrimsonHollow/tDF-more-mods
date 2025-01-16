@@ -5,7 +5,7 @@ local module = ShaguTweaks:register({
     description = "Moves the right Actionbar to the center of the screen.",
     expansions = { ["vanilla"] = true, ["tbc"] = nil },
     category = "Deli UI",
-    enabled = nil,
+    enabled = true,
 })
 
 module.enable = function(self)
@@ -26,11 +26,13 @@ module.enable = function(self)
  -- anchor button 1 so 12 buttons are centered above default bars
 MultiBarRightButton1:ClearAllPoints()
 MultiBarRightButton1:SetFrameStrata("BACKGROUND")
-MultiBarRightButton1:SetPoint("CENTER",UIParent,"CENTER",-83,-185)
+MultiBarRightButton1:SetPoint("CENTER",UIParent,"CENTER",-84,-185)
 
 local function powerpos()
 	if DeliPower then
-	MultiBarRightButton1:SetPoint("CENTER",PlayerFrameManaBar,"CENTER",-83,-31)
+	MultiBarRightButton1:SetPoint("CENTER",PlayerFrameManaBar,"CENTER",-84,-31)
+	elseif DeliPower2 then
+	MultiBarRightButton1:SetPoint("CENTER",PlayerFrameManaBar,"CENTER",-84,-24)
 	end
 end
 

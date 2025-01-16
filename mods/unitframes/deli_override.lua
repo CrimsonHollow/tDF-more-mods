@@ -10,7 +10,7 @@ local module = ShaguTweaks:register({
   description = "Use with Deli_Unitframes!!!",
   expansions = { ["vanilla"] = true, ["tbc"] = true },
   category = "Deli UI",
-  enabled = nil,
+  enabled = true,
 })
 
 -- Global code:
@@ -30,6 +30,11 @@ module.enable = function(self)
         end
 		
 		if DeliPower then
+			PlayerFrameHealthBar.TextString:ClearAllPoints()
+			PlayerFrameHealthBar.TextString:SetPoint("TOP", PlayerFrameHealthBar, "BOTTOM", 0, 35)
+		end
+		
+		if DeliPower2 then
 			PlayerFrameHealthBar.TextString:ClearAllPoints()
 			PlayerFrameHealthBar.TextString:SetPoint("TOP", PlayerFrameHealthBar, "BOTTOM", 0, 35)
 		end

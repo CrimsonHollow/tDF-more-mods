@@ -3,7 +3,7 @@ local module = ShaguTweaks:register({
     description = "Restyles the ui based on my (Delirium/Ark) preferences",
     expansions = { ["vanilla"] = true, ["tbc"] = nil },
     category = "Deli UI",
-    enabled = nil,
+    enabled = true,
 })
 
 module.enable = function(self)
@@ -496,6 +496,7 @@ local sections  = {
             TargetFrame.name,
             TargetofTargetName,
 			TargetofTargetHealthBar.TextString,
+			TargetDeadText,
 			TargetofTargetManaBar.TextString,
             --PartyMemberFrame1.name,
             --PartyMemberFrame2.name,
@@ -507,17 +508,25 @@ local sections  = {
             --PartyMemberFrame4PetFrame.name
         }
 		
+		
+		PetName:Hide()
 		PlayerFrame.name:Hide()
 		PlayerFrameHealthBar.TextString:SetPoint("TOP", PlayerFrameHealthBar, "BOTTOM", 0, 30)
 		TargetFrameHealthBar.TextString:SetPoint("TOP", TargetFrameHealthBar, "BOTTOM", -2, 30)
 		PlayerFrameHealthBar.TextString:SetPoint("TOP", PlayerFrame, "TOP", 50, -15)
 		PlayerFrame.name:SetPoint("TOP", PlayerFrame, "TOP", 50, -15)
 		TargetFrame.name:SetPoint("TOP", TargetFrame, "TOP", -50, -15)
+		
         local font, size, outline = customfont, 12, "OUTLINE"
         for _, name in pairs(names) do
             name:SetFont(font, size, outline)
         end
-		
+		if  DeliPower or DeliPower2 then
+		PlayerFrameManaBar.TextString:SetFont(font, size +4, outline)
+		end
+		combat = customfont
+		DAMAGE_TEXT_FONT = combat
+		CombatTextFont:SetFont(combat, 25)
 		PlayerFrameHealthBar.TextString:SetFont(font, size +2, outline)
 		TargetFrameHealthBar.TextString:SetFont(font, size +2, outline)
     end
@@ -552,6 +561,7 @@ local sections  = {
     restyle:SetScript("OnEvent", function()
         if not this.loaded then
             this.loaded = true
+			
             restyle:addons()           
             restyle:buffs()
             restyle:buttons()
